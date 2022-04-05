@@ -1,3 +1,16 @@
-// Rust Learning Notes
+#### https://doc.rust-lang.org/book/
+## Rust Learning Notes
 
-! = zb println!(); the ! means calling a macro 
+```
+! in println!();
+```
+ means calling a macro
+
+### Run / Compile 
+
+#### Compile
+``` rustc codefile.rs ```
+#### Run
+```codefile.exe```
+
+
