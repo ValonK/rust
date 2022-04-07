@@ -1,5 +1,6 @@
 mod scalar;
 mod compound;
+mod functions;
 
 fn main() {
     scalar::shadowing_example();
@@ -12,4 +13,11 @@ fn main() {
 
     compound::array_example();
     compound::tuple_example();
+
+    functions::normal();
+    functions::with_parm(2);
+    functions::with_multiple_params(2, 2, 'A');
+    functions::expression();
+    functions::function_with_return_value();
+    let x = functions::also_function_with_return_value();
 }
