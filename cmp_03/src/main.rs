@@ -1,6 +1,7 @@
 mod scalar;
 mod compound;
 mod functions;
+mod controlstatements;
 
 fn main() {
     scalar::shadowing_example();
