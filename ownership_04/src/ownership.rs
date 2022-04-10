@@ -3,7 +3,7 @@ fn scope_example() {
     let s1 = String::from("hello, world");
     let s2 = s1;
 
-    // println!("s1={}, s2={}", s1, s2); will not compile, s1 is dropped
+     // println!("s1={}, s2={}", s1, s2); will not compile, s1 is dropped
 }
 
 fn scope_example2() {
@@ -29,7 +29,7 @@ pub fn ownership_fn_example(){
 
     // ownership_fn_example_child takes ownership of s1
     ownership_fn_example_child(s1); // s1 is moved into function
-    // println!("s1 valu = {}", s1);              s1 is no longer valid here
+    //println!("s1 valu = {}", s1); s1 is no longer valid here
 
     let x = 5;
     ownership_fn_example_int_child(x); // x would move into function, but x is i32 and is copy
