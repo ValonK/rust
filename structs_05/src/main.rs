@@ -1,3 +1,4 @@
+mod rectexample;
 
 fn main() {
     
@@ -18,6 +19,17 @@ fn main() {
     let point = Point(1, 1, 1);
 
     let subject = AlwaysEqual;
+
+    let rect = rectexample::Rectangle {
+        height: 30,
+        width: 20,
+    };
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rectexample::area(&rect)
+    );
+
 }
 
 fn create_user(username: String, email: String) -> User {
