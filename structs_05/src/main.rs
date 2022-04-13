@@ -1,19 +1,8 @@
 mod rectexample;
-
+mod user;
+use crate::user::User;
 fn main() {
     
-    let user = User {
-        email: String::from("test@test.com"),
-        username: String::from("test"),
-        active: true,
-        sign_in_count: 1
-    };
-
-    let user2 = User {
-        username: user.username,
-        ..user
-    };
-
     // create instance of tuple struct
     let color = Color(1, 2, 3);
     let point = Point(1, 1, 1);
@@ -32,32 +21,17 @@ fn main() {
 
     println!("Rectangle: width: {}", rect.width());
 
-}
 
-fn create_user(username: String, email: String) -> User {
-    User {
-        email: email,
-        username: username,
-        active: true,
-        sign_in_count: 1,
-    }
-}
+    let valon = User{
+        name: String::from("Valon"),
+        last_name: String::from("Kastrati"),
+        email: String::from("v@vv.vv"), 
+        is_active: true,
+        password: String::from("123456")
+    };
 
-fn create_user_short_hand(username: String, email: String) -> User {
-    User {
-        active: true,
-        username,
-        email,
-        sign_in_count: 1,
-    }
-}
- 
-
-struct User {
-    active: bool,
-    username: String,
-    email: String,
-    sign_in_count: u64,
+    // let full_name = valon.get_full_name();
+    // println!("Full Name: {}", full_name);
 }
 
 // Tuple structs
