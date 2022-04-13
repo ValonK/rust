@@ -3,6 +3,18 @@ pub struct Rectangle {
     pub width: u32,
 }
 
-pub fn area(rect: &Rectangle) -> u32{
-    rect.width * rect.height
+impl Rectangle {
+
+    // Methods must have a parameter named self of type Self 
+    // for their first parameter, 
+    // so Rust lets you abbreviate this with only
+    // the name self in the first parameter spot.
+    pub fn area(&self) -> u32 {
+        self.width * self.height
+    }
+
+    // getter
+    pub fn width(&self) -> u32{
+        self.width
+    }
 }

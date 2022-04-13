@@ -27,8 +27,10 @@ fn main() {
 
     println!(
         "The area of the rectangle is {} square pixels.",
-        rectexample::area(&rect)
+        rect.area()
     );
+
+    println!("Rectangle: width: {}", rect.width());
 
 }
 
