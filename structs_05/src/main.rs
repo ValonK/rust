@@ -27,6 +27,9 @@ fn main() {
     println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
 
     let square = rectexample::Rectangle::square(20);
+
+    println!("Umfang: {}", rect1.cirumconference());
+
 }
 
 fn tuple_struct(){

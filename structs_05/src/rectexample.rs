@@ -24,8 +24,12 @@ impl Rectangle {
         self.area() > other.area()
     }
 
-    // not associated function, often used for creation / constructor
+    // associated function, not a method, often used for creation / constructor
     pub fn square(size: u32) -> Rectangle{
         Rectangle { height: size, width: size }
     }
+
+    pub fn cirumconference(&self) -> u32{
+        2 * (self.width + self.height) 
+    }        
 }
