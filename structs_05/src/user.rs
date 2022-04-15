@@ -8,10 +8,4 @@ pub struct User {
 
 impl User {
 
-    fn get_full_name(&self) -> String {
-
-        let name = String::new();
-        name.push_str(&self.last_name.to_string());        
-        name
-    }
 }

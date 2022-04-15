@@ -1,37 +1,42 @@
 mod rectexample;
 mod user;
-use crate::user::User;
+
+// Structs let you create custom types that are meaningful for your domain.
+// By using structs, you can keep associated pieces of data connected to each other and name each piece to make your code clear.
+// In impl blocks, you can define functions that are associated with your type,
+// and methods are a kind of associated function that let you specify the behavior that instances of your structs have.
+
 fn main() {
     
+    let rect1 = rectexample::Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    let rect2 = rectexample::Rectangle {
+        width: 10,
+        height: 40,
+    };
+
+    let rect3 = rectexample::Rectangle {
+        width: 60,
+        height: 45,
+    };
+
+    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+    println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
+
+    let square = rectexample::Rectangle::square(20);
+}
+
+fn tuple_struct(){
     // create instance of tuple struct
     let color = Color(1, 2, 3);
     let point = Point(1, 1, 1);
+}
 
+fn unit_struct(){
     let subject = AlwaysEqual;
-
-    let rect = rectexample::Rectangle {
-        height: 30,
-        width: 20,
-    };
-
-    println!(
-        "The area of the rectangle is {} square pixels.",
-        rect.area()
-    );
-
-    println!("Rectangle: width: {}", rect.width());
-
-
-    let valon = User{
-        name: String::from("Valon"),
-        last_name: String::from("Kastrati"),
-        email: String::from("v@vv.vv"), 
-        is_active: true,
-        password: String::from("123456")
-    };
-
-    // let full_name = valon.get_full_name();
-    // println!("Full Name: {}", full_name);
 }
 
 // Tuple structs
