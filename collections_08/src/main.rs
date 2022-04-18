@@ -1,3 +1,7 @@
+mod utf8strings;
+
+use std::vec;
+
 fn main() {
 
     let mut v2 = vec![1,2,3,4];
@@ -20,7 +24,7 @@ fn add_val_to_vec(){
 
 fn get_value_from_vec_with_index(){
     let mut v = vec![1,2,3];
-    let third: &i32 = &v[2];
+    let third: &i32 = &v[2];  
 }
 
 fn get_value_from_vec_with_get(){
@@ -45,3 +49,18 @@ fn iterate_mutable_vec(){
         *i += 50;
     }
 }
+
+fn vector_enum(){
+    let row = vec![
+        SpreadsheetCell::Int(32),
+        SpreadsheetCell::Float(10.23),
+        SpreadsheetCell::Text(String::from("hi")),
+    ];
+}
+
+enum SpreadsheetCell{
+    Int(i32),
+    Float(f32),
+    Text(String),
+}
+
