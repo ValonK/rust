@@ -1,5 +1,5 @@
 mod utf8strings;
-
+mod hashmaps;
 use std::vec;
 
 fn main() {
