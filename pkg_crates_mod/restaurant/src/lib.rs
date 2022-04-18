@@ -4,23 +4,12 @@ use crate::front_of_house::hosting as Hosting;
 // bring absolute path into scope
 use crate::front_of_house::hosting;
 
+mod front_of_house;
+
 //
 //  bring relative path into scope use self::front_of_house::hosting;
 
 use back_of_house::Appetizer;
-
-mod front_of_house{
-    pub mod hosting{
-        pub fn add_two_waitlist(){}
-        fn seat_at_table(){}
-    }
-
-    mod serving {
-        fn take_order(){}
-        fn serve_order(){}
-        fn take_payment(){}
-    }
-}
 
 pub fn eat_at_restaurant(){
 
