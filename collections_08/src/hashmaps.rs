@@ -77,8 +77,6 @@ fn check_if_key_has_value() {
     println!("{:?}", map);
 }
 
-
-
 fn create_map() -> &mut HashMap<String, String>{
     let mut map = HashMap::new();
     map.insert("Key1", "Value1");
