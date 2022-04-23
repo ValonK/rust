@@ -4,6 +4,7 @@ use std::collections::HashMap;
 fn main() {
     let mut numbers = create_vector();
     let median = median_example(&mut numbers);
+    let mode = mode_example(&mut numbers);
     println!("{}", median);
 }
 
@@ -29,17 +30,17 @@ fn median_example(int_vec: &mut Vec<i32>) -> i32 {
     int_vec[mid]
 }
 
-fn mode_example(int_vec: &mut Vec<i32>) -> Option<i32> {
+fn mode_example(int_vec: &mut Vec<i32>) -> i32 {
  
     let mut occurrences = HashMap::new();
 
-    for value in int_vec {
+    for &value in int_vec {
         *occurrences.entry(value).or_insert(0) += 1;
     }
 
-    int_vec.iter().copied().max_by_key(|&n| {
-        let count = int_vec.entry(n).or_insert(0);
-        *count += 1;
-        *count
-    })
+    occurrences
+        .into_iter()
+        .max_by_key(|&(_, count)| count)
+        .map(|(val, _)| val)
+        .expect("Cannot compute the mode of zero numbers")
 }
